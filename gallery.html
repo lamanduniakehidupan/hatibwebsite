@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Gallery</title>
+  <link rel="stylesheet" href="Css/website.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Inter:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="icon" type="images/uitm_logo.png" href="images/uitm_logo.png">
+  <style>
+    body {
+      font-family: 'Inter', sans-serif;
+      margin: 0;
+      background: url('images/bg-gallery.jpg') no-repeat center center fixed;
+      background-size: cover;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+    }
+
+    nav.navbar {
+      background: rgba(0, 0, 0, 0.85);
+      padding: 10px 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      color: ghostwhite;
+    }
+
+    nav.navbar .logo {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.5rem;
+      font-weight: bold;
+    }
+
+    nav.navbar ul {
+      list-style: none;
+      display: flex;
+      gap: 25px;
+    }
+
+    nav.navbar ul li a {
+      color: palevioletred;
+      text-decoration: none;
+      font-weight: 600;
+    }
+
+    nav.navbar ul li a.active,
+    nav.navbar ul li a:hover {
+      color: white;
+      text-shadow: 0 0 5px ;
+    }
+
+    .gallery-section {
+      padding: 60px 20px;
+      max-width: 1200px;
+      margin: 0 auto;
+      flex: 1;
+    }
+
+    .gallery-title {
+      text-align: center;
+      font-family: 'Playfair Display', serif;
+      font-size: 2.5rem;
+      color: palevioletred;
+      margin-bottom: 40px;
+    }
+
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 30px;
+    }
+
+    .gallery-item {
+      position: relative;
+      overflow: hidden;
+      border-radius: 15px;
+      box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+      cursor: pointer;
+    }
+
+    .gallery-item img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.4s ease;
+      display: block;
+      .gallery-item video {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.4s ease;
+        display: block;
+      }
+
+
+    }
+
+    .gallery-item:hover img {
+      transform: scale(1.08);
+    }
+
+    .gallery-desc {
+      position: absolute;
+      bottom: 0;
+      width: 100%;
+      background: rgba(0,0,0,0.65);
+      color: floralwhite;
+      font-weight: 600;
+      text-align: center;
+      padding: 12px 10px;
+      opacity: 0;
+      transition: opacity 0.4s ease;
+    }
+
+    .gallery-item:hover .gallery-desc {
+      opacity: 1;
+      .gallery-item:hover video {
+      transform: scale(1.08);
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      background: #111;
+      color: #fff;
+      font-size: 0.9rem;
+    }
+  </style>
+</head>
+<body>
+
+  <nav class="navbar">
+    <div class="logo"></div>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="gallery.html" class="active">Gallery</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
+
+<br> 
+
+  <section class="gallery-section">
+    <h2 class="gallery-title">My Gallery</h2>
+    <div class="gallery-grid">
+      <div class="gallery-item">
+        <img src="images/meetarik.jpeg" alt="Friends">
+        <div class="gallery-desc">Friends</div>
+      </div>
+      <div class="gallery-item">
+        <img src="images/dago.jpeg" alt="Friends">
+        <div class="gallery-desc">Friends</div>
+      </div>
+      <div class="gallery-item">
+        <img src="images/kema2.jpeg" alt="Friends">
+        <div class="gallery-desc">Friends</div>
+      </div>
+      <div class="gallery-item">
+        <img src="images/sch.jpeg" alt="Best Moments">
+        <div class="gallery-desc">Best Moments</div>
+      </div>
+       <div class="gallery-item">
+        <img src="images/rugby.jpeg" alt="Best Moments">
+        <div class="gallery-desc">Best Moments</div>
+      </div>
+      <div class="gallery-item">
+        <img src="images/sulam.jpeg" alt="Best Moments">
+        <div class="gallery-desc">Best Moments</div>
+      </div>
+      <div class="gallery-item">
+      <video controls>
+         <source src="video/rugby.mp4" type="video/mp4">
+       Your browser does not support the video tag.
+       </video>
+         <div class="gallery-desc">Video</div>
+        </div><div class="gallery-item">
+      <video controls>
+         <source src="video/jj.mp4" type="video/mp4">
+       Your browser does not support the video tag.
+       </video>
+         <div class="gallery-desc">Video</div>
+        </div>
+        <div class="gallery-item">
+      <video controls>
+         <source src="video/meandher.mp4" type="video/mp4">
+       Your browser does not support the video tag.
+       </video>
+         <div class="gallery-desc">Video</div>
+        </div>
+      
+      
+
+  </section>
+
+  <footer>
+    &copy; 2025 HATIB. All rights reserved.
+  </footer>
+
+  <audio id="bgm" src="audio/lofi3.mp3" loop></audio>
+
+  <script src="java/java.js"></script>
+
+</body>
+</html>
